@@ -17,7 +17,7 @@ class Weather extends React.Component {
 
     componentDidMount() {
         axios
-            .get('https://api.openweathermap.org/data/2.5/weather?q=Sydney&appid=6f0f19718f5b2eef464f5626acdbf0ca')
+            .get('')
             .then((response) => console.log(response))
             // .then((result) => {
             //     const weatherAndTemp={
