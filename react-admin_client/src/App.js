@@ -1,23 +1,18 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import Login from './pages/login/login.jsx';
-import Admin from './pages/admin/admin.jsx'
-//root component
+import Weather from './components/index'
 
-export default class App extends Component{
 
-    render=() =>(
-            <BrowserRouter>
+
+
+
+export default class App extends Component {
+    render(){return(
+        <BrowserRouter>
             <Switch>
-                <Route path="/login" component={Login}>
-                
-            </Route>
-            <Route path="/admin" component={Admin}>
-
-            </Route>
+                <Route path = '/weather' component = {Weather}/>
             </Switch>
-            </BrowserRouter>
-        )
-        
-    }
+        </BrowserRouter>
+    )}
+}
