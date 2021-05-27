@@ -14,5 +14,6 @@ export default class App extends Component {
                 <Route path = '/weather' component = {Weather}/>
             </Switch>
         </BrowserRouter>
+        
     )}
 }
