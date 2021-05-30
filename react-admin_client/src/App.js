@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
-import Weather from './components/index'
+import Weather from './components/Body/index'
 
 
 
