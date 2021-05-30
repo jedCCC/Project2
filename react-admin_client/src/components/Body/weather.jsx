@@ -1,18 +1,17 @@
 import React from 'react'
-import WeatherAndTemp from './WeatherAndTemp/index'
-import WindSpeedAndHumidity from './WindSpeedAndHumidity/index'
+import WeatherInfo from './WeatherInfo/index'
 import './weather.less'
 
 //weather route component
 class Weather extends React.Component {
     constructor() {
         super();
-        this.state = {
-            name: null,
+        this.state = {     
             temp: null,
             weather: null,
             windSpeed: null,
             humidity: null,
+            cityName: null,
         }
     }
 
@@ -25,7 +24,7 @@ class Weather extends React.Component {
                 this.setState({
                     weather: result.weather.description,
                     windSpeed: result.wind.speed,
-                    name: result.name,
+                    cityName: result.name,
                     temp: result.main.temp,
                     humidity: result.main.humidity,
                 })
@@ -35,7 +34,7 @@ class Weather extends React.Component {
     }
 
     render() {
-        const { name, temp, windSpeed, weather, humidity } = this.state;
+        const { cityName, temp, windSpeed, weather, humidity } = this.state;
 
         return (
             <div className="weather">
@@ -44,8 +43,8 @@ class Weather extends React.Component {
                 </header>
                 <section className="weather-content">
                     <h2 className="weather-content-title">Current Local Weather</h2>
-                    <WeatherAndTemp weather={weather} temp={(temp - 273.15).toFixed(1)} />
-                    <WindSpeedAndHumidity windSpeed={windSpeed} humidity={humidity} city={name} />
+                    <WeatherInfo weather={weather} temp={(temp - 273.15).toFixed(1)} 
+                    windSpeed={windSpeed} humidity={humidity} cityName={cityName}/>
                 </section>
             </div>
         )
