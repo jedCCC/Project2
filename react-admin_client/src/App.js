@@ -8,7 +8,8 @@ import Weather from './components/Body/index'
 
 
 export default class App extends Component {
-    render(){return(
+    render(){
+        return(
         <BrowserRouter>
             <Switch>
                 <Route path = '/weather' component = {Weather}/>
