@@ -1,6 +1,8 @@
 import React from 'react'
-import WeatherInfo from './WeatherInfo/index'
+import WeatherInfo from './WeatherInfoCard/index'
 import './weather.less'
+
+Const WeatherContainer = styled.
 
 //weather route component
 class Weather extends React.Component {
